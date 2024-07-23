@@ -85,12 +85,12 @@
 }
 
 .about .socialIcons .icon {
-  display: none;
+  display: block;
 }
 
 @media (min-width: 750px) {
   .about .socialIcons .icon {
-    display: block;
+    display: inline;
     margin-left: -23px;
     margin-right: 15px;
   }
