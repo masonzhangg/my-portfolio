@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: var(--spacing);
+  
 }
 
 .aboutContainer {
@@ -29,7 +29,7 @@
 
 .contentContainer h4 {
   color: var(--hl-color);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -71,7 +71,6 @@
 }
 
 
-
 .buttonContainer {
   display: flex;
   align-items: center;
@@ -88,18 +87,19 @@
   display: none;
 }
 
-@media (min-width: 750px) {
+@media (max-width: 768px) {
   .about .socialIcons .icon {
-    display: inline;
+    display: block;
     margin-left: -23px;
     margin-right: 15px;
   }
-  .about .socialIcons::before {
+  .about .socialIcons::befo
+  re {
     height: 2px;
-    display: flex;
-    
+    display: block;
   }
 }
+
 
 @media (min-width: 992px) {
   .personalImage img {
