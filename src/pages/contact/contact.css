@@ -1,0 +1,99 @@
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing);
+  overflow: hidden;
+}
+
+.contentTitle {
+  color: var(--text-color);
+  padding-bottom: 10px;
+}
+
+.contactInfo {
+  font-size: 12px;
+  color: var(--secondary-text-color);
+  margin-bottom: var(--sm-spacing);
+  margin-left: -85px;
+}
+
+.contentDescription {
+  font-size: 15px;
+}
+
+.info {
+  font-size: 15px;
+}
+
+.infoDescription {
+  margin-top: -40px;
+  margin-bottom: var(--sm-spacing);
+}
+
+.personalContactInfo {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.mediaWrap {
+  border-left: 2px solid var(--grey);
+  padding-left: var(--sm-spacing);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+
+textarea {
+  resize: none;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.icon {
+  color: var(white);
+  font-size: 28px;
+}
+
+.infoIcon {
+  width: var(--spacing);
+  display: flex;
+  align-items: center;
+}
+
+.infoType {
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.infoValue a {
+  color: var(--hl-color);
+}
+
+
+.contact .socialIcons {
+  display: none;
+}
+
+.mediaWrap a:hover {
+  color: var(--hl2-color);
+}
+
+@media (min-width: 400px) {
+  .contactInfo {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 750px) {
+  .contact .socialIcons {
+    display: inline;
+    padding-bottom: var(--sm-spacing);
+  }
+
+}

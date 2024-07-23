@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+/* --- VARIABLES --- */
+:root {
+  --bg-color: #101010;
+  --hl-color: #25A1DA;
+  --text-color: #f3f3f3;
+  --secondary-text-color: #9f9f9f;
+  --grey: #9f9f9f76;
+  --spacing: 50px;
+  --sm-spacing: 30px;
+}
+
+/* --- ANIMATIONS --- */
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1%);
+    opacity: 1;
+  }
+}
+
+/* --- RESETS --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* --- GLOBAL STYLES --- */
+
+::selection {
+  background-color: var(--hl-color);
+  color: var(--text-color);
+}
+.pageTitle {
+  color: var(--text-color);
+  font-size: 36px;
+  margin-bottom: var(--spacing);
+}
+
+.pageDescription {
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.socialIcons .icon {
+  color: var(--text-color);
+}
+
+.socialIcons .icon:hover {
+  scale: 1.2;
+  color: var(--hl-color);
+}
+
+.btn {
+  color: #f9f9f9;
+  background-color: var(--hl-color);
+  border: none;
+  font-size: 14px;
+  padding: 12px var(--sm-spacing);
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #25a1da;
+}
+
+/* --- MOBILE STYLES --- */
+
+/* --- HEADER ---  */
+header {
+  padding: var(--sm-spacing) var(--spacing);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1050px;
+  position: relative;
+  
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Add spacing between the links */
+  flex-wrap: wrap; /* Ensure links wrap to the next line if necessary */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 15px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-right: 20px; /* Add space between links */
+}
+
+.nav-links a:last-child {
+  margin-right: 0; /* Remove margin for the last link */
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+
+.links {
+  display: none;
+  position: absolute;
+  top: 93px;
+  right: 0px;
+  background-color: var(--bg-color);
+  width: 100%;
+  padding: 10px;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+  margin-right: 10px;
+}
+
+.links a:hover {
+  color: white;
+}
+
+.links.open {
+  display: block;
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.openMenu,
+.closeMenu {
+  position: absolute;
+  height: 20px;
+  margin: -15px;
+  transition: transform 0.5s ease-in-out;
+  position: fixed; /* Make sure the icons are fixed in place */
+  top: 50px; /* Adjust as needed */
+  right: 325px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it is above other elements */
+
+}
+
+/* --- MEDIA QUERIES --- */
+@media (min-width: 750px) {
+  .links {
+    display: flex;
+    background-color: var(--bg-color);
+    justify-content: flex-end;
+    position: relative;
+    top: auto;
+    width: 0;
+    left: 0;
+    padding: 0 10px;
+  }
+
+  .links a {
+    padding: 0px;
+    margin-left: 3px;
+  }
+
+  .links div:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .dropdown-toggle {
+    display: none;
+  }
+
+  .links a:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .links a:hover:before {
+    width: 100%;
+  }
+
+  .links a.active:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+  }
+
+  .closed {
+    background-color: transparent;
+  }
+
+  .toggleMode {
+    display: inline-block;
+  }
+}
