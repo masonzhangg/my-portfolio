@@ -87,6 +87,7 @@ textarea {
 @media (min-width: 400px) {
   .contactInfo {
     font-size: 15px;
+
   }
 }
 
@@ -96,4 +97,11 @@ textarea {
     padding-bottom: var(--sm-spacing);
   }
 
+}
+
+@media (max-width: 768px) {
+  .contactInfo {
+    font-size: 10px;
+    margin-left: 90px;
+  }
 }
