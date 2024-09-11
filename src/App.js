@@ -12,7 +12,7 @@ function App() {
     location: "Berkeley, CA",
     email: "masonzhang@berkeley.edu",
     brand:
-      "Hello I'm an incoming freshman at UC Berkeley for computer science. I specialize in front-end development but have experience in AI/ML, full-stack, and software development. My socials are below so don't hesitate to reach out!",
+      "Hello I'm a freshman at UC Berkeley studying computer science. I specialize in front-end development but have experience in AI/ML, full-stack, and software development. My socials are below so don't hesitate to reach out!",
     github: "masonzhangg",
     linkedin: "masonzhangg",
   });
